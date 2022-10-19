@@ -1,0 +1,11 @@
+/* #xx{
+    background-color: blue;
+}
+
+#zz :nth-child(odd){
+    background-color: blueviolet;
+}
+
+#zz :nth-child(even){
+    background-color: rgb(43, 226, 101);
+} */

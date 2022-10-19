@@ -1,0 +1,57 @@
+<!-- FOR PIPES -->
+<h2 style="color:green ;">Angular Pipes:-</h2>
+<!-- FOR TEXT -->
+<h3>Origanal text: {{sampletext}}</h3>
+<h3>Uppercase : {{sampletext | uppercase}}</h3>
+<h3>Lowercase : {{sampletext | lowercase}}</h3>
+<h3>Titlecase : {{sampletext | titlecase}}</h3>
+<h3>{{City| titlecase}}</h3>
+
+<!-- FOR Date Pipe -->
+
+<h3 style="color: green;">Date Pipe :-</h3>
+<h3>Origanal Date :{{date1}}</h3>
+<h3>Standard Format: {{date1 | date}}</h3>
+<h3>Short Date: {{date1 | date:'short'}}</h3>
+<h3>Medium Date:{{date1 | date:'medium'}}</h3>
+<h3>dd/mm/yyyy date: {{date1 |date:'dd/MM/yyyy' }}</h3>
+<!-- FOR Currency Pipe -->
+<h3 style="color: green;">Currency Pipe:</h3>
+
+    <h4>Original Text: {{salary}}</h4>
+    <h4>Original Text: {{salary | currency}}</h4>
+
+    <h4>Original Text: {{salary | currency:'INR'}}</h4>
+    <h4>Original Text: {{salary | currency:'USD'}}</h4>
+    <h4>Original Text: {{salary | currency:'AED'}}</h4>
+
+
+    <!-- FOR JSON Pipe- -->
+<h3 style="color: green;">JSON Pipe:</h3>
+
+<p>JSON Pipe: {{data |json}}</p>
+<br>
+<!-- FOR Slice Pipe -->
+<h3 style="color: green;">Slice Pipe</h3>
+<h4>Original Text: {{sampletext}}</h4>
+<h4>Slice Text: {{sampletext | slice:2}}</h4>
+<h4>Slice Text: {{sampletext | slice:0:7}}</h4>
+
+<h4>Slice Text: {{City | slice:0:3}}</h4>
+
+
+    <!-- FOR Multiple Pipe -->
+<h3 style="color: green;">Multiple Pipes:</h3>
+
+<p>Multiple Pipes: {{sampletext | slice :0:5 | uppercase}}</p>
+
+<!-- <p>Multiple Pipes: {{sampleText | slice :0:5 | date:'short'}}</p> -->
+<!-- FOR Custom Pipe -->
+<h3 style="color: green;">Custom Pipe</h3>
+
+<p>Original Text: {{sampletext}}</p>
+
+<p>Original Text: {{salary | cust: 100:25:45 }}</p>
+
+
+<p>Original Text: {{sampletext | cust  }}</p>
