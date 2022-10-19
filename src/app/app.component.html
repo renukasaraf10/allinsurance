@@ -1,35 +1,70 @@
-<h2>Hello This is New Angular</h2>
-<p>This is for github</p>
-<!-- for data binding -->
-<!-- <app-binding></app-binding> -->
 
-<!-- for directives -->
-<!-- <app-directives></app-directives> -->
+<nav class="navbar navbar-expand-sm bg-light navbar-light" >
+  <div class="container-fluid" style="background-color: pink;">
+    <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="nav-link" href="parent">parent</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" routerLink="first">First</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" routerLink="second">Second</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" routerLink="f">f</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" routerLink="s">S</a>
+</li>
+<li class="nav-item">
+  <!-- <a class="nav-link" routerLink="ug">UG</a> -->
+  <select  (change)="onSelectUGmenu($event)">
+    <option #dt *ngFor="let i of ug" value="{{i.path}}"> {{i.name}} </option>
+  </select>
+</li>
 
-<!-- for templatefrom -->
-<!-- <app-templateform></app-templateform> -->
+<li class="nav-item">
+  <a class="nav-link" routerLink="pg/pgstaff">PG</a>
+</li>
 
-<!-- for reactive form -->
-<!-- <app-reactiveform></app-reactiveform> -->
+<li class="nav-item">
+  <a class="nav-link" routerLink="samp">sampaldata</a>
+</li>
 
-<!-- for pipe -->
-<!-- <app-pipe></app-pipe> -->
+<li class="nav-item">
+  <a class="nav-link" routerLink="dt">Data</a>
+</li>
 
-<!-- for child -->
-<!-- <app-child></app-child> -->
+<li class="nav-item">
+  <a class="nav-link" routerLink="newdata">Pradata</a>
+</li>
 
-<!-- for lifecycle -->
-<!-- <app-lifecycle></app-lifecycle> -->
+<li class="nav-item">
+  <a class="nav-link" routerLink="renu">RENA</a>
+</li>
 
-<!-- crud application -->
-<!-- <app-crudapp></app-crudapp> -->
+</ul>
+</div>
+</nav>
 
-<!-- for service -->
-<!-- <app-service-data></app-service-data> -->
+<div class="container">
+<router-outlet></router-outlet>
+</div>
 
-<!-- for promise -->
-<!-- <app-promise></app-promise> -->
+<!-- <nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
 
-<!-- for rxjs -->
-<!-- <app-rxjs></app-rxjs> -->
-<!-- <app-practice></app-practice> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="parent">Parent</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="first">First</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="second">Second</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->

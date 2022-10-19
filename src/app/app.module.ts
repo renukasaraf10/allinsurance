@@ -1,49 +1,69 @@
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {TriStateCheckboxModule} from 'primeng/tristatecheckbox';
+import { MessagesModule } from 'primeng/messages';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BindingComponent } from './binding/binding.component';
-import { DirectivesComponent } from './directives/directives.component';
-import { PipeComponent } from './pipe/pipe.component';
-import { CustPipe } from './cust.pipe';
-import { ChildComponent } from './child/child.component';
-import { LifecycleComponent } from './lifecycle/lifecycle.component';
-import { CustdirDirective } from './custdir.directive';
-import { CrudappComponent } from './crudapp/crudapp.component';
-import { ServiceDataComponent } from './service-data/service-data.component';
-import{ HttpClientModule} from '@angular/common/http';
-import { PromiseComponent } from './promise/promise.component';
-import { RxjsComponent } from './rxjs/rxjs.component';
-import { TemplateformComponent } from './templateform/templateform.component';
-import { ReactiveformComponent } from './reactiveform/reactiveform.component';
-import { PracticeComponent } from './practice/practice.component';
 
+import { ParentsComponent } from './datacommunication/parents/parents.component';
+import { ChildComponent } from './datacommunication/parents/child/child.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+import { FComponent } from './f/f.component';
+import { SComponent } from './s/s.component';
+import { ButtonModule } from 'primeng/button';
+
+import {DialogModule} from 'primeng/dialog';
+import { ConfirmationService } from 'primeng/api';
+import { SampaldataComponent } from './sampaldata/sampaldata.component';
+import { DatacomeComponent } from './datacome/datacome.component';
+import { PradataComponent } from './pradata/pradata.component';
+import { ForpraComponent } from './forpra/forpra.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    BindingComponent,
-    DirectivesComponent,
-    PipeComponent,
-    CustPipe,
+
+    ParentsComponent,
     ChildComponent,
-    LifecycleComponent,
-    CustdirDirective,
-    CrudappComponent,
-    ServiceDataComponent,
-    PromiseComponent,
-    RxjsComponent,
-    TemplateformComponent,
-    ReactiveformComponent,
-    PracticeComponent
+    FirstComponent,
+    SecondComponent,
+    FComponent,
+    SComponent,
+    SampaldataComponent,
+    DatacomeComponent,
+    PradataComponent,
+    ForpraComponent,
+    
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    AppRoutingModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+    TriStateCheckboxModule,
+    MessagesModule ,
+    ConfirmDialogModule,
+    DialogModule,
+    HttpClientModule,
+   ConfirmDialogModule,
+    ButtonModule,
+    HttpClientModule,
     ReactiveFormsModule,
-    HttpClientModule
+    FormsModule
+
+
+    
+    
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ConfirmationService],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

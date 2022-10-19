@@ -1,0 +1,32 @@
+<p>sampaldata works!</p>
+
+
+<!-- <div *ngIf="checkflag">
+    This true div
+</div>
+
+<div  *ngIf="!checkflag">
+    This is false div
+</div> -->
+
+<div *ngIf="checkflag else showingtemplate">
+    This is else/true block
+    </div>
+    <ng-template #showingtemplate>
+        This false block
+    </ng-template>
+<br>
+    
+
+<div *ngIf="subjectflag">
+    <div *ngFor="let sub of subject">
+       {{sub}}
+    </div>
+    </div>
+
+
+    <ng-container *ngIf="subjectflag">
+        <div *ngFor="let sub of subject">
+            {{sub}}
+        </div>
+    </ng-container>
